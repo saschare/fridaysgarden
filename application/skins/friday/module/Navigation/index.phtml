@@ -1,0 +1,4 @@
+<?php foreach ($this->nav as $nav) : $counter++; ?>
+<li data-slide="<?php echo $counter; ?>" <?php if($counter == 1) : ?> style="display:none;" <?php endif;?>><?php echo $nav['name']; ?><li>
+<?php endforeach; ?>
+<li style="display:none;"><script type="application/x-moraso" src="Language.Selector:sprache"></script></li>

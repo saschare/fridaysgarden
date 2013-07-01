@@ -1,0 +1,15 @@
+<!-- block1 -->
+<?php foreach ($this->articles as $article) : ?>
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" style="background-image: url(/image/1920/1440/0/<?php echo $article->idart; ?>/<?php echo $article->mainimage; ?>); overflow: hidden; min-height:1000px; background-color:#efefe3; background-repeat:no-repeat;">
+	<div class="container clearfix">
+		<div id="main" class="grid_7">
+			<span class="head1" style="padding: 10px; line-height: 1.7em;"><?php echo strip_tags($article->pagetitle, '<br><br />'); ?></span>
+        	<br />
+		</div> 	
+       	<div class="dark grid_7" style="padding: 10px">
+            	<h2 style="color: #fff; line-height: 1.3em; "><?php echo strip_tags($article->intro, '<br><br />'); ?></h2>
+        </div>		
+        <?php echo $article->content; ?>
+	</div>
+</div>
+<?php endforeach; ?>
